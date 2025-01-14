@@ -1,0 +1,90 @@
+/* Diseño general de la sección de créditos del pie de página */
+.Design {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para la sección de ubicación del pie de página */
+.location {
+  display: flex;
+  justify-content: right;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilo para el contenedor principal */
+main {
+  margin: 6em;
+}
+
+/* Estilos de la tabla */
+table {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  border-radius: 15px;
+  border-collapse: collapse; /* Evita doble borde */
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table, th, td {
+  padding: 8px;
+  text-align: center;
+  line-height: 1.42857143;
+  vertical-align: top;
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+  width: 1em;
+  height: 1em;
+}
+
+td img {
+  width: 2em;
+  height: 2em;
+  display: inline-block; /* Asegura que la imagen sea visible en su celda */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+  border-style: none;
+  max-width: none;
+}
+
+/* Hacer la tabla responsiva con scroll horizontal */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto; /* Activa el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en dispositivos móviles */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  table {
+    width: auto; /* Ancho basado en el contenido */
+    min-width: 600px; /* Establece un ancho mínimo para evitar apilamiento */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  th, td {
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
