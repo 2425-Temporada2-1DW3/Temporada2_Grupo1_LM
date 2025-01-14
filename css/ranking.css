@@ -1,0 +1,61 @@
+/* Estilos para la tabla */
+table {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  border-radius: 15px;
+  border-collapse: collapse;
+  overflow: hidden;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table, th, td {
+  padding: 8px;
+  text-align: center;
+  line-height: 1.42857143;
+  vertical-align: top;
+  padding: 1em;
+  border-bottom: 1px solid #ddd;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+th, td {
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+  width: 1em;
+  height: 1em;
+}
+
+td img {
+  width: 2em;
+  height: 2em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  display: block;
+  margin: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Hacer la tabla responsiva mediante scroll horizontal */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto; /* Activa el scroll horizontal */
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en dispositivos móviles */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  table {
+    width: auto; /* Permite que la tabla tome solo el ancho de su contenido */
+    min-width: 600px; /* Establece un ancho mínimo para evitar que las celdas se apilen */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  th, td {
+    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}

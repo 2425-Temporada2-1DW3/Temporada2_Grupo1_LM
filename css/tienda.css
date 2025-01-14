@@ -1,0 +1,67 @@
+section {
+    width: 70%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.contenidotienda {
+    display: flex; /* Activar flexbox */
+    justify-content: space-between; /* Espaciado entre columnas */
+    gap: 1%; /* Espacio entre las columnas */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.columna{
+    margin: auto;
+    flex: 1; /* Hacer que cada columna ocupe un espacio igual */
+    padding: 5%;
+    text-align: center; /* Centra el texto en la columna */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imagenproducto{
+    max-width: 100%; /* Evita que la imagen sea más grande que la columna */
+    transition: transform 0.3s ease; /* Animación suave */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+    /* Con la propiedad HOVER decimos que pase algo cuando el cursor pase
+    sobre la imagen, en este caso seria el TRANSITION que vemos arriba 
+    en la imagen y abajo esta la propiedad HOVER, en este caso vamos a 
+    transformarlo, TRANSFORM */
+.imagenproducto:hover{
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al 120% */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nombreproducto{
+color: rgb(45, 45, 45);
+font-size: 80%;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.secciontienda{
+    text-align: center;
+    padding: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contenidotienda {
+        display: flex;
+        justify-content: space-between;
+        gap: 1%;
+        flex-direction: column;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
