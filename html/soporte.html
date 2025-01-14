@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos importantes -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta la escala de la página en dispositivos móviles -->
+    <title>Soporte F.E.R</title> <!-- Título de la página -->
+
+    <!-- Enlaces a hojas de estilo externas -->
+    <link rel="stylesheet" href="../css/normalize.css"> <!-- Normaliza el estilo para que se vea consistente en todos los navegadores -->
+    <link rel="stylesheet" href="../css/menuFooter.css"> <!-- Estilos específicos para el menú y pie de página -->
+    <link rel="stylesheet" href="../css/soporte.css"> <!-- Estilos personalizados para la página de soporte -->
+</head>
+
+<body>
+
+    <!-- Imagen de fondo -->
+    <img id="Background" src="../media/icons/Background.png" alt="background image">
+
+    <!-- Encabezado con el menú de navegación -->
+    <header>
+        <nav>
+            <!-- Logo en la barra de navegación -->
+            <img id="imgMenu" src="../media/F.E Rugby.webp" alt="" srcset="">
+
+            <!-- Lista de navegación con enlaces a las principales secciones del sitio -->
+          
+            <ul>
+                <li><a class="mainMenu" href="../index.html">Noticias</a></li>
+                <li><a class="mainMenu" href="./equipos.html">Equipos</a></li>
+                <li><a class="mainMenu" href="./jornadas.html">Jornadas</a></li>
+                <li><a class="mainMenu" href="./ranking.html">Ranking</a></li>
+                <li><a class="mainMenu" href="./tienda.html">Tienda</a></li>
+                <li><a class="mainMenu" id="mainPage" href="./soporte.html">Soporte</a></li> <!-- Página actual -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección principal que contiene dos bloques: ubicación y formulario de contacto -->
+    <section class="contedor-soporte">
+        <!-- Bloque 1: Muestra la ubicación utilizando un mapa de Google Maps -->
+        <div class="Bloque1">
+
+            <!-- Bloque de ubicación con mapa embebido de Google Maps -->
+            <div class="texto-bloque1"><strong><h2>Nuestra ubicación:</h2></strong></div>
+            <div class="mapa">
+                <!-- Mapa de Google Maps con la ubicación de la Federación -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.164390955639!2d-2.9299244243653053!3d43.247976378546056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e502fa2990b89%3A0x97fbddf9c0743de5!2sFederaci%C3%B3n%20Bizkaina%20de%20Rugby!5e0!3m2!1ses-419!2ses!4v1728374744116!5m2!1ses-419!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="Bloque2">
+            <!-- Bloque de contacto con enlaces a redes sociales y formulario -->
+            <div class="texto-bloque2"><strong><h2>Contáctanos:</h2></strong></div>
+            
+            <!-- Enlaces a redes sociales -->
+            <div class="logos"> 
+                <a href="https://www.facebook.com/ferugby1923/?locale=es_ES"><img src="../media/icons/Facebook.svg" alt="Facebook Logo" height="70px"></a>
+                <a href="https://www.instagram.com/ferugby/?hl=es"><img src="../media/icons/instagram.svg" alt="Instagram Logo"  height="70px"></a>
+                <a href="https://x.com/ferugby?lang=es"><img src="../media/icons/xTwitter.svg" alt="X Twitter Logo"  height="70px"></a>
+                <a href="https://www.youtube.com/user/FERUGBYTV"><img src="../media/icons/youtube.svg" alt="Youtube Logo"  height="70px"></a>
+            </div>
+
+            <!-- Formulario de contacto para enviar consultas -->
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required> <!-- Campo obligatorio para el nombre -->
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> <!-- Campo obligatorio para el email -->
+    
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="4" required></textarea> <!-- Campo obligatorio para la descripción -->
+    
+                <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+            </form>
+            
+        </div>
+    </section> 
+
+    <!-- Pie de página con redes sociales, créditos de diseño y enlaces de contacto -->
+    <footer>
+        <!-- Enlaces a redes sociales -->
+
+        <div class="rrss">
+            <a href="https://www.facebook.com/ferugby1923/?locale=es_ES"><img src="../media/icons/Facebook.svg" alt="Facebook Logo"></a>
+            <a href="https://www.instagram.com/ferugby/?hl=es"><img src="../media/icons/instagram.svg" alt="Instagram Logo"></a>
+            <a href="https://x.com/ferugby?lang=es"><img src="../media/icons/xTwitter.svg" alt="X Twitter Logo"></a>
+            <a href="https://www.youtube.com/user/FERUGBYTV"><img src="../media/icons/youtube.svg" alt="Youtube Logo"></a>
+        </div>
+        
+        <!-- Información de diseño -->
+        <div class="Design">
+            Designed by PseudoCode <!-- Crédito del diseño -->
+        </div>
+
+        <!-- Sección de ubicación y contacto del pie de página -->
+        <div class="location">
+            <a href=""><img src="../media/icons/location.svg" alt="Location Logo"></a>
+            <a href=""><img src="../media/icons/email.svg" alt="Email Logo"></a>
+        </div>
+    </footer>
+</body>
+</html>
