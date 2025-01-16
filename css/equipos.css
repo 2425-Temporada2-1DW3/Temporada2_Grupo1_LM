@@ -1,100 +1,127 @@
-/* Estilo para el texto principal */
-.texto {
-    font-style: italic; /* Estilo de fuente en cursiva */
-    margin-left: 2%; /* Margen izquierdo del 2% */
-    text-align: left; /* Alineación del texto a la izquierda */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Familia tipográfica */
-    font-size: 20px; /* Tamaño de la fuente de 20px */
-    color: white; /* Color del texto en blanco */
-    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
-    line-height: 2; /* Altura de línea mayor para espacio entre líneas */
-    letter-spacing: 0px; /* Espaciado entre letras normal */
-    text-shadow: /* Sombra de texto en todas las direcciones */
-        1px 0px 2px black, /* Sombra hacia la derecha */
-        0px 1px 2px black, /* Sombra hacia arriba */
-        -1px 0px 2px black, /* Sombra hacia la izquierda */
-        0px -1px 2px black; /* Sombra hacia abajo */
+/* Estilos base para la página de equipos */
+.equipos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
 }
 
 /* Estilo para la disposición en filas */
-rows {
-    display: flex; /* Flexbox para alineación de elementos en fila */
-    flex-direction: row; /* Dirección de los elementos en fila horizontal */
-    margin-top: -3%; /* Margen superior negativo para reducir espacio */
-    margin-bottom: -2%; /* Margen inferior negativo */
-    margin-left: 1%; /* Margen izquierdo de 1% */
-    margin-right: 1%; /* Margen derecho de 1% */
-    width: 98%; /* Ancho del 98% del contenedor */
+.equipos-rows {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 0;
+    padding-top: 40px;
+    width: 500px;
 }
 
-/* Estilo para los cuadros */
-cuadro {
-    display: flex; /* Flexbox para los cuadros */
-    width: 60%; /* Ancho del cuadro al 60% del contenedor */
-    height: 50%; /* Alto del cuadro al 50% */
-    margin-left: 4%; /* Margen izquierdo del 4% */
-    margin-right: 4%; /* Margen derecho del 4% */
-    margin-top: 4%; /* Margen superior del 4% */
-    margin-bottom: 4%; /* Margen inferior del 4% */
+/* Estilos básicos del botón */
+.detalles {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
 }
 
-/* Estilo para las imágenes tipo escudo */
-.escudo {
-    width: 25%; /* Ancho del escudo al 25% */
-    opacity: 100%; /* Opacidad completa */
-    border-radius: 10%; /* Bordes redondeados del 10% */
+/* Estilos de la animación */
+.detalles::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s;
+    z-index: -1;
 }
 
-/* Estilo para el contenedor de información */
-info {
-    display: flex; /* Flexbox en columna */
-    flex-direction: column; /* Dirección de los elementos en columna */
+.detalles:hover {
+    color: #ffffff;
+    transform: scale(1.05); /* Aumentar el tamaño en un 5% */
+    border-color: #020202; /* Cambiar el color del borde */
 }
 
-/* Estilos responsivos para pantallas de menos de 1050px */
-@media screen and (max-width: 1050px) {
-    rows {
-        display: flex; /* Flexbox para filas */
-        flex-direction: column; /* Cambia la dirección a columna */
-        justify-content: center; /* Centra los elementos verticalmente */
-        align-items: center; /* Centra los elementos horizontalmente */
-        margin-top: -3%; /* Mantiene el margen superior negativo */
-        margin-bottom: -2%; /* Margen inferior negativo */
-        margin-left: 0%; /* Elimina el margen izquierdo */
-        width: 98%; /* Ancho del 98% del contenedor */
+.detalles:hover::before {
+    left: 0;
+}
+
+/* Estilo para los cuadros individuales */
+.equipos-cuadro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%; /* Ancho ajustable para responsividad */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Estilo para los escudos */
+.equipos-escudo img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+.equipos-escudo img:hover {
+    transform: scale(1.1); /* Zoom al pasar el cursor */
+}
+
+/* Estilo para la información */
+.equipos-info {
+    margin-top: 15px;
+    text-align: left;
+    width: 100%;
+    margin-left: 3%;
+}
+
+.equipos-titulos {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.equipos-texto {
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.5;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilo para audio */
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .equipos-cuadro {
+        width: 90%;
     }
 
-    cuadro {
-        display: flex; /* Flexbox */
-        flex-direction: column; /* Alinea los elementos en columna */
-        justify-content: center; /* Centra el contenido verticalmente */
-        align-items: center; /* Centra el contenido horizontalmente */
-        width: 60%; /* Ancho del 60% */
-        height: 50%; /* Alto del 50% */
-        margin-left: 8%; /* Margen izquierdo aumentado al 8% */
-        margin-right: 8%; /* Margen derecho aumentado al 8% */
-        margin-top: 6%; /* Margen superior aumentado al 6% */
-        margin-bottom: 14%; /* Margen inferior aumentado al 14% */
+    .equipos-escudo img {
+        max-width: 120px;
     }
-
-    .escudo {
-        width: 100%; /* Escudo ocupa todo el ancho en pantallas pequeñas */
-        opacity: 100%; /* Mantiene la opacidad */
-        border-radius: 10%; /* Bordes redondeados del 10% */
-    }
-
-    info {
-        display: flex; /* Flexbox en columna */
-        flex-direction: column; /* Dirección en columna */
-    }
-
-    .texto {
-        font-style: italic; /* Cursiva */
-        text-align: center; /* Texto centrado en pantallas pequeñas */
-        font-family: Verdana, Geneva, Tahoma, sans-serif; /* Mantiene la fuente */
-        font-size: 100%; /* Tamaño de fuente ajustado */
-        color: white; /* Texto en blanco */
-        white-space: pre-line; /* Permite saltos de línea */
-        line-height: 1.3; /* Menor altura de línea para compactar texto */
+    .equipos-rows{
+        padding: 0em 1em 0em 1em;
     }
 }

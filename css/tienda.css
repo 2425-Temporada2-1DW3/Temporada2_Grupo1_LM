@@ -1,4 +1,6 @@
 section {
+    display: flex; /* Activar flexbox */
+    flex-direction: column;
     width: 70%;
     margin: auto;
     margin-top: 10%;
@@ -10,6 +12,7 @@ section {
 
 .contenidotienda {
     display: flex; /* Activar flexbox */
+    
     justify-content: space-between; /* Espaciado entre columnas */
     gap: 1%; /* Espacio entre las columnas */
     font-family: Verdana, Geneva, Tahoma, sans-serif;

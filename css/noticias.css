@@ -1,10 +1,11 @@
 /* Estilos para la sección principal */
 section {
     position: relative; /* Posiciona el contenido relativo a la sección */
-    height: 85vh; /* Altura de la sección en el 85% de la ventana gráfica */
+     /* Altura de la sección en el 85% de la ventana gráfica */
     display: flex; /* Flexbox para organizar los elementos */
     align-items: center; /* Centra los elementos verticalmente */
     padding: 0 5%; /* Espaciado interno a los lados del 5% */
+    padding-bottom: 70px;
 }
 
 /* Estilos para la primera noticia (Noticia1) */
@@ -77,9 +78,20 @@ aside {
     float: right; /* Alinea el aside a la derecha del contenedor */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.contenedor-noticas{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "noticia noticia banner"
+    "noticia noticia banner"
+    ;
+}
+.banner {
+    grid-area: banner;
+}
 /* Estilos para el artículo de la segunda noticia */
-#noticia2 {
+.noticia{
+    grid-area: noticia;
     margin-bottom: 15px; /* Espacio inferior de 15px */
     background-image: url('../media/noticia2.jpg'); /* Imagen de fondo para la segunda noticia */
     background-size: cover; /* La imagen cubre toda el área */
@@ -87,8 +99,8 @@ aside {
 }
 
 /* Estilos para el artículo de la tercera noticia */
-#noticia3 {
-    background-image: url('../media/images/noticiaImg.webp'); /* Imagen de fondo para la tercera noticia */
+#noticia {
+     /* Imagen de fondo para la tercera noticia */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
