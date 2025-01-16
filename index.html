@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/noticias.css">
     
     <link rel="stylesheet" href="./css/menuFooter.css">
+    <link rel="icon" type="image/webp" href="./media/rugbyFavicon.png">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
@@ -123,6 +125,21 @@
                 <li data-url="./html/soporte.html"><a class="mainMenu" href="#">Soporte</a></li>
             </ul>
         </nav>
+
+        <script>
+            function showSidebar() {
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+            function hideSidebar() {
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'none'
+            }
+            
+            
+            
+        </script>
+
     </header>
 
     <!-- Sección principal de noticias -->
@@ -134,8 +151,8 @@
                 <source src="media\videos\Top 5_ Stunning tries in Rugby World Cup 2019 pool stages.mp4" type="video/mp4"> <!-- mira si funcione -->
                 <source src="media\videos\Top-5_-Stunning-tries-in-Rugby-World-Cup-2019-pool-stages.webm" type="video/webm"> <!-- firefox y edge-->
                 Tu navegador no soporta el formato de video.
-              </video>
-           
+            </video>
+
         </article>
 
         <!-- Aside con artículos adicionales -->

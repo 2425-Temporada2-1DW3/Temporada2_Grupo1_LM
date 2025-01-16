@@ -158,6 +158,24 @@ footer div a img {
     text-align: center; 
 }
 
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    flex-direction: column;
+    height: 100%;
+}
+
+.slide {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: xx-large;
+   
+}
+
 /* Media Queries */
 
 /* Pantallas pequeñas (móviles) */

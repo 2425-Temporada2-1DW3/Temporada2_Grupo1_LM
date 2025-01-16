@@ -10,6 +10,9 @@ h1 {
 
 /* Estilos para la sección */
 section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     margin: auto; /* Centra la sección horizontalmente */
     text-align: center; /* Alinea el texto y contenido al centro */
     padding: 1px; /* Espaciado interno de 1px */

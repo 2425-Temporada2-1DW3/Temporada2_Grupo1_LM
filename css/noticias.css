@@ -9,13 +9,7 @@ section {
 }
 
 /* Estilos para la primera noticia (Noticia1) */
-#Noticia1 video {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    border-radius: 5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+
 #Noticia1 h2 {
     font-size: xx-large;
     color: aliceblue;
@@ -64,8 +58,8 @@ section {
 
 /* Estilos para el aside */
 aside {
-    width: 40%; /* El aside ocupa el 40% del contenedor principal */
-    height: 90vh; /* Altura del 90% de la ventana gráfica */
+    width: 100%; /* El aside ocupa el 40% del contenedor principal */
+    height: 100%; /* Altura del 90% de la ventana gráfica */
     border-radius: 5%; /* Bordes redondeados */
     padding: 20px; /* Espaciado interno de 20px */
     display: flex; /* Flexbox para organizar el contenido interno */
@@ -79,11 +73,11 @@ aside {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .contenedor-noticas{
-    display: grid;
+    display:flex;
+    flex-direction: column;
     width: 100%;
-    grid-template-areas: 
-    "noticia noticia banner"
-    "noticia noticia banner"
+    height: 100%;
+    
     ;
 }
 .banner {
@@ -91,9 +85,12 @@ aside {
 }
 /* Estilos para el artículo de la segunda noticia */
 .noticia{
-    grid-area: noticia;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
     margin-bottom: 15px; /* Espacio inferior de 15px */
-    background-image: url('../media/noticia2.jpg'); /* Imagen de fondo para la segunda noticia */
+    background-image: url('/media/images/noticiaDinamicaOne.jpg'); /* Imagen de fondo para la segunda noticia */
     background-size: cover; /* La imagen cubre toda el área */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
