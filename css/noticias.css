@@ -14,10 +14,17 @@ section {
 .contenedor-noticias {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Noticias grandes y pequeñas */
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     margin: 20px;
     padding: 10px;
 }
+h2 {
+    font-size: 1.5rem !important; /* Tamaño base */
+    margin: 0;
+}
+
 
 /* Noticias grandes */
 .noticia-grande {
@@ -97,7 +104,18 @@ section {
     font-size: 1.2rem;
     font-weight: bold;
 }
+.ultimosPartidos{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-style:oblique;
 
+
+}
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 * {
@@ -220,10 +238,18 @@ justify-content: center;
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
+  h2 {
+      font-size: 0.7rem !important; /* Tamaño para tablets */
+  }
 }
 
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
   }
+  h2 {
+      font-size: 0.7rem !important; /* Tamaño para tablets */
+  }
+  .contenedor-noticias{
+    grid-template-columns: 1fr 1fr;}
 }
