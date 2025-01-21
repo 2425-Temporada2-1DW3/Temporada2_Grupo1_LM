@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- 
+        Se define el tipo de documento HTML5 y el idioma (español). 
+        Las etiquetas meta son para la codificación y la adaptación a pantallas móviles.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias F.E.R</title>
+    <!-- 
+        Archivos CSS externos para normalizar estilos, estilo de la página de noticias, 
+        y estilos del menú y footer
+    -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/noticias.css">
+    
+    <link rel="stylesheet" href="./css/menuFooter.css">
+    <link rel="icon" type="image/webp" href="./media/rugbyFavicon.png">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            function obtenerNombreDeArchivo(url) {
+                var ruta = url.split("/");
+                return ruta.pop();
+            }
+    
+            function obtenerNombreSinExtension(url) {
+                var ruta = url.split("/");
+                var nombreArchivoConExtension = ruta.pop();
+                return nombreArchivoConExtension.split(".")[0];
+            }
+    
+            function cargarContenido(url) {
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    dataType: "html",
+                    success: function (data) {
+                        $("#contenido").html(data);
+    
+                        // Obtener el nombre del archivo sin extensión
+                        var nombreSinExtension = obtenerNombreSinExtension(url);
+    
+                        // Cargar el estilo CSS correspondiente
+                        cargarEstiloCSS(nombreSinExtension);
+    
+                        // Cambiar el título de la página
+                        $(document).attr(
+                            "title",
+                            nombreSinExtension.charAt(0).toUpperCase() +
+                                nombreSinExtension.slice(1) +
+                                " - F.E.R."
+                        );
+                    },
+                    error: function () {
+                        $("#contenido").html("Error al cargar el contenido.");
+                    },
+                });
+            }
+    
+            function cargarEstiloCSS(nombre) {
+                // Eliminar cualquier hoja de estilo dinámica previamente añadida
+                $("link[data-dinamico='true']").remove();
+    
+                // Crear una nueva hoja de estilo si corresponde
+                var rutaCSS = `./css/${nombre}.css`;
+                $("<link>")
+                    .attr({
+                        rel: "stylesheet",
+                        href: rutaCSS,
+                        type: "text/css",
+                        "data-dinamico": "true",
+                    })
+                    .appendTo("head");
+            }
+    
+            // Asociar eventos al hacer clic en los elementos del menú
+            $("nav ul li").on("click", function () {
+                var url = $(this).data("url");
+                cargarContenido(url);
+            });
+    
+            // Asociar eventos al hacer clic en los elementos de los equipos
+            $(document).on("click", ".equipos-escudo", function (e) {
+                e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+                var url = $(this).data("url");
+                cargarContenido(url);
+            });
+    
+            // Cargar contenido predeterminado al cargar la página
+            cargarContenido($("nav ul li:first").data("url"));
+        });
+    </script>
+    
+
+
+
+</head>
+<body>
+    <!-- Imagen de fondo -->
+    <img id="Background" src="./media/icons/Background.png" alt="background image">
+    
+    <!-- Header que contiene el menú de navegación -->
+    <header>
+        <nav>
+            <!-- Logo principal -->
+            <img id="imgMenu" src="./media/F.E Rugby.webp" alt="" srcset="">
+            <!-- Menú de navegación principal con enlaces a otras páginas -->
+            <ul>
+                <li data-url="./html/Noticias.html"><a class="mainMenu" id="mainPage" href="#">Noticias</a></li>
+                <li data-url="./html/equipos.html"><a class="mainMenu" href="#">Equipos</a></li>
+                <li data-url="./html/calendario.html"><a class="mainMenu" href="#">Calendario</a></li>
+                
+                <div class="dropdown">
+                    <li data-url="./html/temporadas.html"><a class="mainMenu" href="#">Temporadas&blacktriangledown;</a></li>
+                    <div class="dropdown-content" id="temporadaOptions"></div>
+                </div>
+                
+
+                <li data-url="./html/tienda.html"><a class="mainMenu" href="#">Tienda</a></li>
+                <li data-url="./html/soporte.html"><a class="mainMenu" href="#">Soporte</a></li>
+            </ul>
+        </nav>
+
+        <script>
+            function showSidebar() {
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'flex'
+            }
+            function hideSidebar() {
+              const sidebar = document.querySelector('.sidebar')
+              sidebar.style.display = 'none'
+            }
+            
+            
+            
+        </script>
+
+    </header>
+
+    <!-- Sección principal de noticias -->
+    <section id="contenido">
+        <!-- Primer artículo principal de noticias -->
+        <article id="Noticia1">
+            <h2>Momentos Importantes de este Año:</h2>
+            <video controls autoplay>
+                <source src="media\videos\Top 5_ Stunning tries in Rugby World Cup 2019 pool stages.mp4" type="video/mp4"> <!-- mira si funcione -->
+                <source src="media\videos\Top-5_-Stunning-tries-in-Rugby-World-Cup-2019-pool-stages.webm" type="video/webm"> <!-- firefox y edge-->
+                Tu navegador no soporta el formato de video.
+            </video>
+
+        </article>
+
+        <!-- Aside con artículos adicionales -->
+        <aside>
+            <!-- Segunda noticia -->
+            <article id="noticia2">
+                <h2>Resultado de un Partido Importante:
+                    “El equipo A vence al equipo B en un emocionante partido con marcador 27-24”.</h2>
+                <div class="botonNoticia2"> <a href="./html/Noticias.html">Leer mas</a></div> <!-- Botón para leer más detalles sobre esta noticia -->
+            </article>
+
+            <!-- Tercera noticia -->
+            <article id="noticia3">
+                <h2 class="specialTitle">Países Bajos y Samoa empatan en el WXV3 y acercan a España al Mundial femenino</h2>
+                <!-- Botón con un enlace hacia otra página con más detalles sobre la noticia -->
+                <div class="botonNoticia2"> <a href="./html/Noticias.html">Leer mas</a></div>
+            </article>
+        </aside>
+    </section>
+   
+    <!-- Footer que contiene enlaces a redes sociales y otros elementos -->
+    <footer>
+        <!-- Enlaces a redes sociales -->
+        <div class="rrss">
+            <a href="https://www.facebook.com/ferugby1923/?locale=es_ES"><img src="./media/icons/Facebook.svg" alt="Facebook Logo"></a>
+            <a href="https://www.instagram.com/ferugby/?hl=es"><img src="./media/icons/instagram.svg" alt="Instagram Logo"></a>
+            <a href="https://x.com/ferugby?lang=es"><img src="./media/icons/xTwitter.svg" alt="X Twitter Logo"></a>
+            <a href="https://www.youtube.com/user/FERUGBYTV"><img src="./media/icons/youtube.svg" alt="Youtube Logo"></a>
+        </div>
+        <!-- Información sobre el diseñador del sitio -->
+        <div class="Design">
+            Designed by G1
+        </div>
+        <!-- Iconos de localización y contacto -->
+        <div class="location">
+            <a href=""><img src="./media/icons/location.svg" alt="Location Logo"></a>
+            <a href=""><img src="./media/icons/email.svg" alt="Email Logo"></a>
+        </div>
+    </footer>
+</body>
+</html>

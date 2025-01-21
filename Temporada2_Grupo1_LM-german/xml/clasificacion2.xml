@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="clasificacion.xslt"?>
+<tabla xmlns="http://www.example.com/clasificacion"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.example.com/clasificacion clasificacion.xsd">
+    <fila>
+        <posicion>3</posicion>
+        <equipo>Equipo A</equipo>
+        <puntos>7</puntos>
+    </fila>
+    <fila>
+        <posicion>1</posicion>
+        <equipo>Equipo B</equipo>
+        <puntos>55</puntos>
+    </fila>
+    <fila>
+        <posicion>2</posicion>
+        <equipo>Equipo C</equipo>
+        <puntos>20</puntos>
+    </fila>
+</tabla>

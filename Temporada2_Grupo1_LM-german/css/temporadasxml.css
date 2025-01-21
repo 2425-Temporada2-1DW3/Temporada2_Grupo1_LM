@@ -1,0 +1,33 @@
+/* Archivo: temporadasxml.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+table.clasificacion {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table.clasificacion th, table.clasificacion td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table.clasificacion th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+table.clasificacion tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.clasificacion tr:hover {
+  background-color: #ddd;
+}
