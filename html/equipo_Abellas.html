@@ -1,13 +1,68 @@
 
+
     <!-- Botón de regreso que lleva a la página de equipos -->
     <!-- <a href="./html/equipos.html"><img class="Back_button" src="../media/icons/Back_button.png" alt="Boton de regreso"></a> -->
 
     <link rel="stylesheet" href="/css/equipo_formato.css">
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- 
+        El tipo de documento es HTML5, y el idioma está configurado como español. 
+        Las etiquetas meta configuran la codificación UTF-8 y la escala para pantallas móviles.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias F.E.R</title>
+    <!-- 
+        Archivos de estilos CSS: 
+        - normalize.css: para normalizar los estilos en los diferentes navegadores.
+        - noticias.css: contiene los estilos específicos de la página de noticias.
+        - menuFooter.css: maneja los estilos del menú y del pie de página.
+        - equipo_EX.css: contiene los estilos para la página de detalle de equipo.
+    -->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/noticias.css">
+    <link rel="stylesheet" href="../css/menuFooter.css">
+    <link rel="stylesheet" href="../css/equipo_formato.css">
+</head>
+
+<body>
+
+    <!-- Imagen de fondo de la página -->
+    <img id="Background" src="../media/icons/Background.png" alt="background image">
+
+    <!-- Cabecera que incluye el menú de navegación -->
+    <header>
+        <nav>
+            <!-- Logo del menú en formato WebP -->
+            <img id="imgMenu" src="../media/F.E Rugby.webp" alt="" srcset="">
+            <!-- Menú de navegación con enlaces a las diferentes secciones del sitio web -->
+            <ul>
+                <li><a class="mainMenu" href="../index.html">Noticias</a></li>
+                <li><a class="mainMenu" id="mainPage" href="../html/equipos.html">Equipos</a> </li>
+                <li><a class="mainMenu" href="../html/jornadas.html">Jornadas</a></li>
+                <li><a class="mainMenu" href="../html/ranking.html">Ranking</a></li>
+                <li> <a class="mainMenu" href="../html/tienda.html">Tienda</a></li>
+                <li><a class="mainMenu" href="../html/soporte.html">Soporte</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Botón de regreso que lleva a la página de equipos -->
+    <a href="./equipos.html"><img class="Back_button" src="../media/icons/Back_button.png" alt="Boton de regreso"></a>
+
+
     <!-- Sección del cuadro que contiene la información del equipo -->
     <cuadro>
         <!-- Imagen del escudo del equipo -->
+
         <img class="escudo" src="../media/Escudos/Escudo_Abellas.png">
+
+        <img class="escudo" src="../media/Esudos/Escudo_Abellas.png">
+
         <info>
             <!-- Información detallada del equipo -->
             <p class="titulo"><strong>Nombre: </strong></p>
@@ -21,4 +76,32 @@
         </info>
     </cuadro>
 
+
     
+
+    <!-- Pie de página con enlaces a redes sociales e información adicional -->
+    <footer>
+        <!-- Sección de redes sociales con enlaces a las plataformas asociadas -->
+        <div class="rrss">
+            <a href="https://www.facebook.com/ferugby1923/?locale=es_ES"><img src="../media/icons/Facebook.svg"
+                    alt="Facebook Logo"></a>
+            <a href="https://www.instagram.com/ferugby/?hl=es"><img src="../media/icons/instagram.svg"
+                    alt="Instagram Logo"></a>
+            <a href="https://x.com/ferugby?lang=es"><img src="../media/icons/xTwitter.svg" alt="X Twitter Logo"></a>
+            <a href="https://www.youtube.com/user/FERUGBYTV"><img src="../media/icons/youtube.svg"
+                    alt="Youtube Logo"></a>
+        </div>
+        <!-- Información sobre el diseño del sitio web -->
+        <div class="Design">
+            Designed by PseudoCode
+        </div>
+        <!-- Iconos adicionales para localización y contacto -->
+        <div class="location">
+            <a href=""><img src="../media/icons/location.svg" alt="Location Logo"></a>
+            <a href=""><img src="../media/icons/email.svg" alt="Email Logo"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
+

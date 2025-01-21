@@ -1,4 +1,5 @@
 
+
 /* Estilos para la sección principal */
 section {
     position: relative; /* Posiciona el contenido relativo a la sección */
@@ -253,3 +254,174 @@ justify-content: center;
   .contenedor-noticias{
     grid-template-columns: 1fr 1fr;}
 }
+
+/* Estilos para la sección principal */
+section {
+    position: relative; /* Posiciona el contenido relativo a la sección */
+    height: 85vh; /* Altura de la sección en el 85% de la ventana gráfica */
+    display: flex; /* Flexbox para organizar los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 5%; /* Espaciado interno a los lados del 5% */
+}
+
+/* Estilos para la primera noticia (Noticia1) */
+#Noticia1 video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    border-radius: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#Noticia1 h2 {
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (max-width: 768px) {
+    #Noticia1 video {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+    }
+}
+
+/* Estilos para el título de la noticia */
+.titulo {
+    position: relative; /* Posiciona el título relativo al contenedor */
+    font-size: 5vh; /* Tamaño del texto del título en unidades relativas a la ventana gráfica */
+    color: white; /* Texto en blanco */
+    z-index: 10; /* Asegura que el título esté en la capa superior */
+    height: fit-content; /* Ajusta la altura al contenido */
+    margin-bottom: 20px; /* Espaciado inferior */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el botón de la noticia principal */
+.botonNoticia {
+    position: relative; /* Posiciona el botón relativo a su contenedor */
+    z-index: 1; /* Controla la superposición del botón */
+    background-color: red; /* Fondo rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 25%; /* Ancho del botón al 25% del contenedor */
+    height: 10%; /* Altura del botón al 10% del contenedor */
+    color: white; /* Color del texto en blanco */
+
+    /* font-size: x-large; Tamaño del texto grande */
+
+    align-self: flex-end; /* Alinea el botón hacia la parte inferior derecha */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    margin-right: 15px; /* Margen derecho de 15px */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el aside */
+aside {
+    width: 40%; /* El aside ocupa el 40% del contenedor principal */
+    height: 90vh; /* Altura del 90% de la ventana gráfica */
+    border-radius: 5%; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno de 20px */
+    display: flex; /* Flexbox para organizar el contenido interno */
+    flex-direction: column; /* Coloca los elementos en una columna */
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Centra horizontalmente el contenido */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Alinea el texto al centro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+    float: right; /* Alinea el aside a la derecha del contenedor */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el artículo de la segunda noticia */
+#noticia2 {
+    margin-bottom: 15px; /* Espacio inferior de 15px */
+    background-image: url('../media/noticia2.jpg'); /* Imagen de fondo para la segunda noticia */
+    background-size: cover; /* La imagen cubre toda el área */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el artículo de la tercera noticia */
+#noticia3 {
+    background-image: url('../media/images/noticiaImg.webp'); /* Imagen de fondo para la tercera noticia */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilo especial para el título en negro */
+.specialTitle {
+    color: black; /* Color del texto negro */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para los artículos dentro del aside */
+aside article {
+    display: flex; /* Flexbox para organizar los artículos */
+    width: 90%;
+    height: 33vh; /* La altura del artículo es el 33% de la ventana gráfica */
+    border-radius: 5%; /* Bordes redondeados */
+    background-size: cover; /* La imagen de fondo cubre todo el artículo */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el botón de la segunda noticia */
+.botonNoticia2 {
+    position: relative; /* Posiciona el botón relativo a su contenedor */
+    z-index: 1; /* Controla la superposición del botón */
+    background-color: red; /* Fondo rojo */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 45vh; /* Ancho del botón en unidades relativas a la ventana gráfica */
+    height: 5vh; /* Altura del botón en unidades relativas a la ventana gráfica */
+    color: white; /* Texto en blanco */
+
+     /* font-size: x-large;  Tamaño del texto grande */
+
+    align-self: flex-end; /* Alinea el botón hacia la parte inferior derecha */
+    display: flex; /* Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    margin-right: 15px; /* Margen derecho de 15px */
+    margin-bottom: 15px; /* Margen inferior de 15px */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el encabezado (h2) dentro de los artículos */
+aside article h2 {
+    font-size: 17px; /* Tamaño del texto en unidades relativas a la ventana gráfica */
+    margin-top: 20px; /* Margen superior de 20px */
+    margin-left: 5px; /* Margen izquierdo de 5px */
+    height: fit-content; /* Ajusta la altura al contenido */
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: white; /* Color del enlace en blanco */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+@media (max-width: 480px) {
+    aside article {
+        height: 20vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+@media (max-width: 768px) {
+    aside article {
+        width: 45vh;
+        height: 25vh;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex-direction: column;
+        height: auto;
+        padding: 0px 2%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
