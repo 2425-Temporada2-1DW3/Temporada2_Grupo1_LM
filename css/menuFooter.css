@@ -52,6 +52,39 @@ header nav ul li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(98, 153, 249);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+
 /* Estilos para los enlaces principales del menú */
 .mainMenu {
     color: white;
@@ -60,7 +93,11 @@ header nav ul li {
 
 /* Estilos para el enlace de la página actual */
 #mainPage {
+
+    
+
     color: red;
+
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -125,6 +162,27 @@ footer div a img {
     margin: 0 10px; 
     text-align: center; 
 }
+
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    flex-direction: column;
+    height: 100%;
+}
+
+.slide {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: xx-large;
+   
+}
+
+
 
 /* Media Queries */
 

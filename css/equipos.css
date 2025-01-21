@@ -1,3 +1,166 @@
+
+/* Estilos base */
+.equipos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el ancho total */
+}
+
+/* Contenedor de filas */
+.equipos-rows {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 40px 20px;
+    max-width: 1200px; /* Limita el ancho máximo en pantallas grandes */
+    box-sizing: border-box;
+}
+
+/* Botones */
+.detalles {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ff0000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+/* Animación de botones */
+.detalles::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.detalles:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.detalles:hover::before {
+    left: 0;
+}
+
+/* Cuadro individual */
+.equipos-cuadro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 45%; /* Ajustable para dispositivos grandes */
+    max-width: 400px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+/* Escudos */
+.equipos-escudo img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
+
+.equipos-escudo img:hover {
+    transform: scale(1.1);
+}
+
+/* Información */
+.equipos-info {
+    margin-left: 3%;
+    width: 100%;
+}
+
+.equipos-titulos {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.equipos-texto {
+    font-size: 16px;
+    margin: 5px 0;
+    line-height: 1.5;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Audio */
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* --- Media Queries --- */
+
+/* Tablets (Pantallas medianas) */
+@media screen and (max-width: 768px) {
+    .equipos-cuadro {
+        width: 90%;
+    }
+
+    .equipos-escudo img {
+        max-width: 120px;
+    }
+
+    .equipos-info {
+        text-align: center;
+    }
+
+    .equipos-rows {
+        padding: 0 10px;
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media screen and (max-width: 480px) {
+    .equipos-cuadro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .equipos-escudo img {
+        margin: 0 auto 10px;
+    }
+
+    .equipos-info {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .equipos-titulos {
+        font-size: 20px;
+    }
+
+    .detalles {
+        font-size: 18px;
+        padding: 10px 20px;
+
 /* Estilo para el texto principal */
 .texto {
     font-style: italic; /* Estilo de fuente en cursiva */
@@ -96,5 +259,6 @@ info {
         color: white; /* Texto en blanco */
         white-space: pre-line; /* Permite saltos de línea */
         line-height: 1.3; /* Menor altura de línea para compactar texto */
+
     }
 }
