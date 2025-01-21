@@ -84,7 +84,6 @@ header nav ul li {
     font-size: 14px;
 }
 
-
 /* Estilos para los enlaces principales del menú */
 .mainMenu {
     color: white;
@@ -93,11 +92,7 @@ header nav ul li {
 
 /* Estilos para el enlace de la página actual */
 #mainPage {
-
     
-
-    color: red;
-
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -164,7 +159,6 @@ footer div a img {
 }
 
 
-
 .slider-container {
     width: 100%;
     overflow: hidden;
@@ -181,8 +175,6 @@ footer div a img {
     font-size: xx-large;
    
 }
-
-
 
 /* Media Queries */
 
