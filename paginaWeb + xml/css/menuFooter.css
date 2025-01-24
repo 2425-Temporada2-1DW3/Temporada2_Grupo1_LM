@@ -1,0 +1,253 @@
+/* Estilos para los enlaces */
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el fondo */
+#Background {
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos para el header (encabezado) */
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para la barra de navegación */
+header nav {
+    background-color: rgba(87, 86, 86, 0.5);
+    color: white;
+    text-align: center;
+    padding: 5px; /* Reduce el padding para ahorrar espacio */
+    margin-top: 2vh;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que el menú se envuelva */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para la lista de navegación dentro del header */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que la lista se envuelva */
+    justify-content: center; /* Centrar elementos de la lista */
+    padding: 0; /* Establecer padding a 0 */
+    margin: 0; /* Establecer margen a 0 */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para los elementos de la lista de navegación */
+header nav ul li {
+    display: inline-block;
+    margin: 5px; /* Reducir margen si es necesario */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(98, 153, 249);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* Estilos para los enlaces principales del menú */
+.mainMenu {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el enlace de la página actual */
+#mainPage {
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos al pasar el ratón sobre los enlaces del menú */
+.mainMenu:hover {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el logo del menú */
+#imgMenu {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el footer (pie de página) */
+footer {
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: rgba(58, 58, 58, 0.7); 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    padding: 10px 0; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para las imágenes dentro de los enlaces del footer */
+footer div a img {
+    width: 30px; 
+    height: 30px; 
+    margin: 10px; 
+    
+}
+
+/* Estilos para las redes sociales en el footer */
+.rrss {
+    display: flex; 
+    justify-content: left; 
+    margin: 0 10px; 
+    text-align: center; 
+}
+
+/* Estilos para la sección de diseño en el footer */
+.Design {
+    display: flex; 
+    justify-content: center; 
+    margin: 0 10px; 
+    text-align: center; 
+    align-items: center; 
+    color: white; 
+    font-size: x-large; 
+}
+
+/* Estilos para la sección de ubicación en el footer */
+.location {
+    display: flex; 
+    justify-content: right; 
+    margin: 0 10px; 
+    text-align: center; 
+}
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    flex-direction: column;
+    height: 100%;
+}
+
+.slide {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: xx-large;
+   
+}
+
+/* Media Queries */
+
+/* Pantallas pequeñas (móviles) */
+@media screen and (max-width: 480px) {
+    header nav {
+        padding: 10px;
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    .Design {
+        font-size: large; 
+
+    }
+
+    header nav ul li {
+        margin: 3px; /* Reduce margen en pantallas muy pequeñas */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header nav {
+        padding: 15px;
+        flex-direction: row; /* Mantiene la dirección en fila */
+        justify-content: center; /* Centra los elementos */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    .Design {
+        font-size: large; 
+    }
+
+    header nav ul li {
+        margin: 4px; /* Ajusta el margen */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media screen and (min-width: 769px) {
+    header nav {
+        padding: 20px;
+        flex-direction: row; /* Mantiene la dirección en fila */
+        justify-content: space-around; /* Espacio entre elementos */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
+    .Design {
+        font-size: x-large; 
+    }
+
+    header nav ul li {
+        margin: 5px; /* Espacio adecuado en pantallas grandes */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+/* Pantallas muy grandes (desktops y pantallas anchas) */
+@media screen and (min-width: 1200px) {
+    header nav {
+        padding: 25px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .Design {
+        font-size: xx-large; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
