@@ -5,17 +5,44 @@
        xsi:schemaLocation="http://www.example.com/clasificacion clasificacion.xsd">
     <fila>
         <posicion>1</posicion>
-        <equipo> A</equipo>
+        <equipo>Equipo </equipo>
         <puntos>10</puntos>
+        <victorias>10</victorias>
+        <derrotas>0</derrotas>
     </fila>
     <fila>
         <posicion>2</posicion>
-        <equipo> B</equipo>
+        <equipo>Equipo </equipo>
         <puntos>8</puntos>
+        <victorias>8</victorias>
+        <derrotas>2</derrotas>
     </fila>
     <fila>
         <posicion>3</posicion>
-        <equipo> C</equipo>
+        <equipo>Equipo </equipo>
         <puntos>6</puntos>
+        <victorias>6</victorias>
+        <derrotas>4</derrotas>
+    </fila>
+    <fila>
+        <posicion>4</posicion>
+        <equipo>Equipo </equipo>
+        <puntos>5</puntos>
+        <victorias>5</victorias>
+        <derrotas>5</derrotas>
+    </fila>
+    <fila>
+        <posicion>5</posicion>
+        <equipo>Equipo </equipo>
+        <puntos>3</puntos>
+        <victorias>3</victorias>
+        <derrotas>7</derrotas>
+    </fila>
+    <fila>
+        <posicion>6</posicion>
+        <equipo>Equipo </equipo>
+        <puntos>1</puntos>
+        <victorias>1</victorias>
+        <derrotas>9</derrotas>
     </fila>
 </tabla>
