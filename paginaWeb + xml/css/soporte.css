@@ -1,0 +1,170 @@
+/* Estilos generales para la sección principal */
+section {
+    display: flex; /* Utiliza flexbox para alinear los bloques en fila */
+    flex-direction: row; /* Coloca los bloques en una fila horizontal */
+    width: 94%; /* Ancho de la sección, ocupa el 94% del contenedor padre */
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    margin-top: 2%; /* Espacio superior del 2% */
+    margin-left: 3%; /* Margen izquierdo del 3% */
+    margin-right: 3%; /* Margen derecho del 3% */
+    margin-bottom: 10%; /* Margen inferior del 10% */
+}
+
+/* Estilos para el primer bloque (mapa y ubicación) */
+.Bloque1 {
+    display: flex; /* Flexbox para organizar contenido dentro del bloque */
+    flex-direction: column; /* El contenido dentro del bloque se ordena en columna */
+    width: 50%; /* Ocupa el 50% del ancho del contenedor */
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    padding: 2%; /* Espacio interno del 2% */
+}
+
+/* Estilo del encabezado de texto en Bloque1 */
+.texto-bloque1 {
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: row; /* El contenido se alinea en una fila */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-content: center; /* Centra el contenido verticalmente */
+    margin: 2%; /* Margen alrededor del bloque */
+    background-color: black; /* Fondo negro para el encabezado */
+    color: white; /* Texto blanco */
+    height: 60px; /* Altura del bloque de texto */
+    padding-top: 2%; /* Espaciado interno en la parte superior */
+    font-size: 100%; /* Tamaño de fuente relativo al tamaño predeterminado */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Familia de fuentes */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Estilos para el mapa */
+.mapa {
+    width: 100%; /* El mapa ocupa todo el ancho disponible */
+    height: 450px; /* Altura fija de 450px */
+}
+
+/* Estilos para el segundo bloque (formulario y redes sociales) */
+.Bloque2 {
+    display: flex; /* Flexbox para organizar el contenido */
+    flex-direction: column; /* Ordena el contenido en columna */
+    width: 50%; /* Ocupa el 50% del ancho */
+    height: 100%; /* Ocupa el 100% de la altura disponible */
+    padding: 2%; /* Espaciado interno del 2% */
+}
+
+/* Estilo del encabezado de texto en Bloque2 (igual que en Bloque1) */
+.texto-bloque2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: 2%;
+    background-color: black;
+    color: white;
+    height: 60px;
+    padding-top: 2%;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px;
+}
+
+/* Estilos para los logos de redes sociales */
+.logos {
+    display: flex; /* Flexbox para distribuir los logos */
+    justify-content: space-around; /* Espacio igual entre los logos */
+    height: 100%; /* Ocupa toda la altura disponible */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-left: 10px; /* Margen izquierdo */
+    margin-right: 10px; /* Margen derecho */
+    text-align: center; /* Centra el texto dentro de los logos */
+}
+
+/* Estilos generales para el contenedor del formulario */
+.form-container {
+    font-family: Arial, sans-serif; /* Familia de fuentes del formulario */
+    background-color: white; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno de 20px */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar relieve */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Máximo ancho de 400px */
+}
+
+/* Estilo para las etiquetas del formulario */
+label {
+    font-family: Arial, sans-serif; /* Familia de fuentes Arial */
+    display: block; /* Cada etiqueta ocupa una línea completa */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 8px; /* Espacio debajo de la etiqueta */
+    color: #ffffff; /* Color gris claro para el texto */
+}
+
+/* Estilos para los campos de entrada y el área de texto */
+input, textarea {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio debajo de los campos */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    background-color: #fafafa; /* Fondo gris claro */
+}
+
+/* Estilos cuando los campos de entrada están enfocados */
+input:focus, textarea:focus {
+    font-family: Arial, sans-serif;
+    border-color: #007bff; /* Cambia el color del borde al enfocarse */
+    outline: none; /* Elimina el borde por defecto */
+}
+
+/* Estilos para el botón de envío */
+button {
+    font-family: Arial, sans-serif;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    background-color: black; /* Fondo negro */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #ffffff; /* Color gris claro para el texto */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Cambia el color de fondo del botón al pasar el ratón */
+button:hover {
+    font-family: Arial, sans-serif;
+    background-color: #0056b3; /* Fondo azul oscuro al hacer hover */
+}
+
+/* Estilos responsivos para pantallas de hasta 800px de ancho */
+@media screen and (max-width: 800px) {
+    /* Sección principal en dispositivos móviles */
+    section {
+        display: flex;
+        flex-direction: column; /* Los bloques se apilan verticalmente */
+        width: 94%;
+        height: 100%;
+        margin-top: 2%;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 10%;
+    }
+
+    /* Ajusta el ancho de Bloque1 para pantallas pequeñas */
+    .Bloque1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Bloque1 ocupa el 100% del ancho */
+        height: 100%;
+        padding: 2%;
+    }
+
+    /* Ajusta el ancho de Bloque2 para pantallas pequeñas */
+    .Bloque2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%; /* Bloque2 ocupa el 100% del ancho */
+        height: 100%;
+        padding: 2%;
+    }
+}
