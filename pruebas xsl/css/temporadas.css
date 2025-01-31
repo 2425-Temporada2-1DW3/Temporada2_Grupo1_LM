@@ -1,0 +1,71 @@
+/* Archivo: temporadasxml.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.clasificacion {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.clasificacion th,
+.clasificacion td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.clasificacion th {
+  background-color: #f2f2f2;
+  color: black;
+}
+
+.clasificacion tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.clasificacion tr:hover {
+  background-color: #ddd;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 10px 5px 10px 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
