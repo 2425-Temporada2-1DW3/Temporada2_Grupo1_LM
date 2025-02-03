@@ -1,0 +1,162 @@
+/* Contenedor de la tabla con desplazamiento horizontal */
+.table-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  overflow-x: auto; /* Permite desplazamiento horizontal solo en el contenedor de la tabla */
+  -webkit-overflow-scrolling: touch; /* Habilita desplazamiento suave en dispositivos táctiles */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+table {
+  width: 100%; /* Asegura que la tabla ocupe el 100% del ancho disponible del contenedor */
+  border-collapse: collapse;
+  background-color: white;
+  padding: 10px;
+}
+
+caption {
+  background-color: white;
+  font-size: 1.5em;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+th {
+  padding: 20px;
+}
+
+.semana {
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td {
+  border: 1.5px solid #ccc;
+  padding: 15px;
+  height: 100px;
+  width: 130px;
+}
+
+.dia {
+  text-align: right;
+  vertical-align: top;
+  position: relative;
+}
+
+.dia img {
+  width: 50%;
+  height: auto;
+  margin-right: 5px;
+}
+
+.dia .imagenes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dia .numero {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.2em;
+}
+
+.vacio {
+  border: none;
+  width: 20px;
+}
+
+.otro {
+  color: #ccc;
+}
+
+/* Consultas de medios para hacer el diseño responsive */
+
+/* Para pantallas más grandes, mantener el diseño igual */
+@media (max-width: 1200px) {
+  caption {
+    font-size: 1.3em;
+  }
+
+  td {
+    padding: 14px;
+    width: 110px;  /* Reducir un poco el tamaño de las celdas */
+  }
+
+  .dia img {
+    width: 45%; /* Reducir un poco el tamaño de las imágenes */
+  }
+
+  .vacio {
+    width: 18px;
+  }
+
+  .semana {
+    width: 18px; 
+  }
+}
+
+/* En pantallas de tamaño medio, como tabletas */
+@media (max-width: 768px) {
+  caption {
+    font-size: 1.1em;
+  }
+
+  td {
+    padding: 12px;
+    width: 95px;  /* Reducir un poco más el tamaño de las celdas */
+  }
+
+  .dia img {
+    width: 40%; /* Reducir aún más las imágenes */
+  }
+
+  th {
+    padding: 12px;
+  }
+
+  .semana {
+    width: 15px; 
+  }
+
+  .vacio {
+    width: 12px;
+  }
+}
+
+/* En pantallas pequeñas, como móviles */
+@media (max-width: 480px) {
+  caption {
+    font-size: 1em;
+  }
+
+  td {
+    padding: 10px;
+    width: 80px;  /* Reducir el tamaño de las celdas de manera significativa */
+  }
+
+  .dia img {
+    width: 30%; /* Las imágenes se hacen mucho más pequeñas */
+  }
+
+  th {
+    padding: 10px;
+  }
+
+  .semana {
+    width: 12px;
+  }
+
+  .dia .numero {
+    font-size: 1em; /* Reducir el tamaño del número */
+  }
+
+  .vacio {
+    width: 8px;
+  }
+}
